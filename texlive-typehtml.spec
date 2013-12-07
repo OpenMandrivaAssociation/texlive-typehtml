@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-typehtml
 Version:	20100223
-Release:	5
+Release:	6
 Summary:	Typeset HTML directly from LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/typehtml
