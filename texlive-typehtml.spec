@@ -1,19 +1,13 @@
-# revision 17134
-# category Package
-# catalog-ctan /macros/latex/contrib/typehtml
-# catalog-date 2010-02-23 16:16:11 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-typehtml
-Version:	20190228
+Version:	17134
 Release:	1
 Summary:	Typeset HTML directly from LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/typehtml
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ Can handle almost all of HTML2, and most of the math fragment
 of the draft HTML3.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -42,23 +36,11 @@ of the draft HTML3.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100223-2
-+ Revision: 757167
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100223-1
-+ Revision: 719826
-- texlive-typehtml
-- texlive-typehtml
-- texlive-typehtml
-
