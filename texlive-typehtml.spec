@@ -1,6 +1,6 @@
 Name:		texlive-typehtml
 Version:	17134
-Release:	1
+Release:	2
 Summary:	Typeset HTML directly from LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/typehtml
