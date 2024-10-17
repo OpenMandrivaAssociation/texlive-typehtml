@@ -3,7 +3,7 @@ Version:	17134
 Release:	2
 Summary:	Typeset HTML directly from LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/typehtml
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/typehtml
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/typehtml.doc.r%{version}.tar.xz
